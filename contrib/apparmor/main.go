@@ -16,9 +16,11 @@ func main() {
 	}
 
 	// parse the arg
+	// 解析参数
 	apparmorProfilePath := os.Args[1]
 
 	// parse the template
+	// 解析模板
 	compiled, err := template.New("apparmor_profile").Parse(dockerProfileTemplate)
 	if err != nil {
 		log.Fatalf("parsing template failed: %v", err)
